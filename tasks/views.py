@@ -4,9 +4,14 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    name = "Salman Noor"
+    tasks = [
+        "fill petrol in the car",
+        "modify the car",
+        "clean the car",
+        "test the car"
+    ]
 
     context = {
-        "name":name
-    }
+        "tasks": tasks
+        }
     return render(request, "base.html", context)

@@ -6,7 +6,11 @@
     <title>ToDo</title>
 </head>
 <body>
-    <H1>My TODO List</H1>
-    <h5>{{name}}</h5>
+    <h1>My TODO List</h1>
+    <ol>
+        {% for task in tasks %}
+        <li>{{task}}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>
