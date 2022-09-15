@@ -11,6 +11,12 @@ def home(request):
         "test the car"
     ]
 
+
+    if request.method =="POST":
+        data = request.POST
+        task = data.get("task")
+        tasks.append(task)
+
     context = {
         "tasks": tasks
         }
